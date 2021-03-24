@@ -1,0 +1,38 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: w3-cli
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/pin_3?characterEncoding=UTF8
+    username: root
+    password: 123456
+  jpa:
+    database: MySQL
+    show-sql: true
+#  data:
+#    elasticsearch:
+#      cluster-nodes: 127.0.0.1:9300
+#  redis:
+#    host: localhost
+#  rabbitmq:
+#    host: 127.0.0.1
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+    static-path-pattern: static/**
+    date-format: yyyy-MM-dd
+eureka:
+  client:
+    service-url: #指定Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+#feign:
+#  hystrix:
+#    enabled: true
+jwt:
+  config:
+    key: bawei
